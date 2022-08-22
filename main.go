@@ -2,6 +2,7 @@ package main
 
 import (
 	"container/list"
+	"dsgo/dsgo"
 	"fmt"
 )
 
@@ -11,6 +12,7 @@ func main() {
 	list1.PushBack(2)
 	fmt.Println(list1)
 	//fmt.Println("Hello")
-	val := addBinary("11", "1")
+	var val = dsgo.AddBinary("11", "1")
 	fmt.Println(val)
+	dsgo.Test2()
 }

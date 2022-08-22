@@ -1,4 +1,4 @@
-package main
+package dsgo
 
 import (
 	"container/list"
@@ -33,7 +33,7 @@ func addOne(a byte, b byte, carry bool) (byte, bool) {
 	}
 }
 
-func addBinary(a string, b string) string {
+func AddBinary(a string, b string) string {
 	listA := list.New()
 	listB := list.New()
 	listR := list.New()
