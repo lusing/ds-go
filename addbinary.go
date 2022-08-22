@@ -66,17 +66,17 @@ func addBinary(a string, b string) string {
 			val, carry1 := addOne(val1, val2, carry)
 			carry = carry1
 			//fmt.Println(val, carry)
-			listR.PushBack(val)
+			listR.PushFront(val)
 		}
 	}
 	if carry {
 		var bytec byte = '1'
-		listR.PushBack(bytec)
+		listR.PushFront(bytec)
 	}
 
 	var build strings.Builder
 
-	for i := listR.Back(); i != nil; i = i.Prev() {
+	for i := listR.Front(); i != nil; i = i.Next() {
 		//fmt.Println(i.Value)
 		build.WriteByte(i.Value.(byte))
 	}
